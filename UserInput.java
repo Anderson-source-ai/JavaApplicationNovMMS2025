@@ -28,7 +28,7 @@ public class UserInput{
 		System.out.println("==================================\n\n");
 		System.out.printf("Hello %s, you are welcome to NIIT%n",fullName);
 		System.out.printf("%s you are %d years old%n",fullName,age);
-		System.out.printf("%s your gender is %c%n",gender);
+		System.out.printf("%s your gender is %c%n",);
 		System.out.printf("you are living in %s%n",address);
 		System.out.printf("There are %d students in your class%n",numberOfStudent);
 		System.out.printf("There are %,d students in your school%n",studentInSchool);
