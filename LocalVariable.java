@@ -11,5 +11,5 @@ public class LocalVariable {
         }
 
         System.out.printf("Your age is %d%n", age);
-    }
+    } 
 }

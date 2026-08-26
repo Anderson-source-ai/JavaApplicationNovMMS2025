@@ -21,6 +21,6 @@ public class ClassWork5 {
         
         System.out.println("\nThe total sum of the 10 numbers is: " + sum);
         
-        scan.close();
+    
     }
 }

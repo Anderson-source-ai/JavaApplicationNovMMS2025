@@ -60,5 +60,7 @@ public class OperatorPart1{
 		
 		boolean isNotEqual = num3 != num4;
 		System.out.printf("Is %d != %d ? %b%n ",num3 ,num4,isNotEqual);
+		int num1 = 5
+		int num2 = 1
 	}
 }

@@ -18,7 +18,7 @@ public class OperatorPart2{
 		
 		
 		//Unary Operator(++ , --)
-		//(Pre-increament , post- increament)
+		//(Pre-increment , post- increment)
 		
 		int x = 10;
 		int y = 20;
