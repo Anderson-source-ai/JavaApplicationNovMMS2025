@@ -1,13 +1,17 @@
 package school.service;
 
-import school.model.Part6_StudentOOP;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Part19_StreamAPI {
-    public List<Part6_StudentOOP> filterHonorRoll(List<Part6_StudentOOP> students) {
-        return students.stream()
-                .filter(s -> s.getGpa() >= 3.5)
-                .collect(Collectors.toList());
+    public static void main(String[] args) {
+        List<Double> gpas = List.of(3.2, 3.9, 2.4, 3.7);
+
+        double averageGpa = gpas.stream()
+                .filter(gpa -> gpa >= 3.0)
+                .mapToDouble(Double::doubleValue)
+                .average()
+                .orElse(0.0);
+
+        System.out.println("Average GPA of Honor Students: " + averageGpa);
     }
 }

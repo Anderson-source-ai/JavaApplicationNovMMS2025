@@ -11,4 +11,12 @@ public class Part32_DesignPatterns {
         }
         return instance;
     }
+
+    public void logPatternAction() {
+        System.out.println("Singleton Design Pattern active.");
+    }
+
+    public static void main(String[] args) {
+        Part32_DesignPatterns.getInstance().logPatternAction();
+    }
 }

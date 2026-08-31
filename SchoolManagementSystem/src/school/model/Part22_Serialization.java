@@ -11,4 +11,9 @@ public class Part22_Serialization implements Serializable {
         this.studentId = studentId;
         this.name = name;
     }
+
+    public static void main(String[] args) {
+        Part22_Serialization object = new Part22_Serialization("STU99", "Olivia");
+        System.out.println("Object instance created ready for serialization: " + object.name);
+    }
 }

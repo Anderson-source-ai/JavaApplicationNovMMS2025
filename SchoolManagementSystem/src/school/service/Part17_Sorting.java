@@ -1,11 +1,34 @@
 package school.service;
 
-import school.model.Part6_StudentOOP;
-import java.util.Comparator;
+import java.util.*;
 
-public class Part17_Sorting implements Comparator<Part6_StudentOOP> {
+class StudentRecord implements Comparable<StudentRecord> {
+    String name;
+    double gpa;
+
+    public StudentRecord(String name, double gpa) {
+        this.name = name;
+        this.gpa = gpa;
+    }
+
     @Override
-    public int compare(Part6_StudentOOP s1, Part6_StudentOOP s2) {
-        return Double.compare(s2.getGpa(), s1.getGpa());
+    public int compareTo(StudentRecord other) {
+        return Double.compare(other.gpa, this.gpa);
+    }
+
+    @Override
+    public String toString() {
+        return name + " (" + gpa + ")";
+    }
+}
+
+public class Part17_Sorting {
+    public static void main(String[] args) {
+        List<StudentRecord> students = new ArrayList<>();
+        students.add(new StudentRecord("Leo", 3.2));
+        students.add(new StudentRecord("Mona", 3.9));
+
+        Collections.sort(students);
+        System.out.println("Sorted by GPA (Descending): " + students);
     }
 }

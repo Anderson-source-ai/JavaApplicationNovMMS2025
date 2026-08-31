@@ -2,15 +2,17 @@ package school.model;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Part20_DateTime {
-    private LocalDate birthDate;
+    public static void main(String[] args) {
+        LocalDate dob = LocalDate.of(2005, 5, 20);
+        LocalDate today = LocalDate.now();
 
-    public Part20_DateTime(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
+        int age = Period.between(dob, today).getYears();
 
-    public int getAge() {
-        return Period.between(birthDate, LocalDate.now()).getYears();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        System.out.println("Date of Birth: " + dob.format(formatter));
+        System.out.println("Calculated Age: " + age + " years");
     }
 }

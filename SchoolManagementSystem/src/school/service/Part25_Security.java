@@ -1,9 +1,14 @@
 package school.service;
 
-public class Part25_Security {
-    public enum Role { ADMIN, TEACHER, STUDENT }
+enum UserRole { ADMIN, TEACHER, STUDENT }
 
-    public boolean canEditGrades(Role role) {
-        return role == Role.ADMIN || role == Role.TEACHER;
+public class Part25_Security {
+    public static boolean canEnterGrades(UserRole role) {
+        return role == UserRole.ADMIN || role == UserRole.TEACHER;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Can Student edit grades? " + canEnterGrades(UserRole.STUDENT));
+        System.out.println("Can Teacher edit grades? " + canEnterGrades(UserRole.TEACHER));
     }
 }

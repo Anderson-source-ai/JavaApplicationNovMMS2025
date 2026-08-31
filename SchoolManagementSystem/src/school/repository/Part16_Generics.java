@@ -13,4 +13,12 @@ public class Part16_Generics<T> {
     public List<T> getAll() {
         return items;
     }
+
+    public static void main(String[] args) {
+        Part16_Generics<String> nameRepo = new Part16_Generics<>();
+        nameRepo.add("Jack");
+        nameRepo.add("Karen");
+
+        System.out.println("Generic List Output: " + nameRepo.getAll());
+    }
 }
